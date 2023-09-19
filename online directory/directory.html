@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Online Dictionary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+        .dictionary {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Dictionary</h1>
+    <div class="dictionary">
+        <label for="word">Enter a word:</label>
+        <input type="text" id="word" placeholder="Type a word here" required>
+        <button onclick="lookupWord()">Search</button>
+
+        <p id="definition"></p>
+    </div>
+    <script>
+        function lookupWord() {
+            var word = document.getElementById("word").value;
+            var definition = "";
+            var dictionaryData = {
+                "apple": "A round fruit with red or green skin and sweet white flesh.",
+                "banana": "A long, curved fruit with a yellow skin and soft flesh.",
+                "carrot": "A long, orange vegetable that grows underground and is often used in cooking."
+            };
+
+            if (dictionaryData.hasOwnProperty(word)) {
+                definition = dictionaryData[word];
+            } else {
+                definition = "Word not found in the dictionary.";
+            }
+
+            document.getElementById("definition").textContent = definition;
+        }
+    </script>
+</body>
+</html>

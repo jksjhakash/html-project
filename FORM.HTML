@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> form </title>
+    </head>
+    <style>
+        body{
+            background-color: rgb(231, 220, 220);
+            margin: 20px;
+        }
+        h1{
+            text-align: center;
+            color: rgb(9, 1, 1);
+        }
+        h3{
+            font-weight: bold;
+        }
+        .pd{
+            border: 3px solid rgb(15, 14, 14);
+            margin: 20px;
+            padding : 40px;
+        }
+    </style>
+    <body>
+        <h1>APPLICATION FORM</h1>
+     <div class="pd">
+        <h3 ><u>PERSONAL DETAILS :</u></h3>
+        <label> Name: </label>
+        <input type="text" required><br><br>
+        <label > Fathers Name : </label>
+        <input type="text" required><br><br>
+        <label > Mother's Name : </label>
+        <input type="text" required><br><br>
+        <label > Date of birth : </label>
+        <input type="date" required><br><br>
+        <label> Select Gender :</label>
+        <input type="radio" name=gender required>Male
+        <input type="radio" name=gender1 required>Female<br><br>
+        <label > country : </label>
+        <select>
+            <option value="country">select country</option>
+            <option value="1">India</option>
+            <option value="5">Nepal</option>
+            <option value="7">Bhutan</option>
+            <option value="4">Afganisthan</option>
+            <option value="9">Pakistan</option>
+        </select><br><br>
+        <input type="button" name=submit value="submit" required>
+    </div>
+    </body>
+</html>

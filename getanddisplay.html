@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="getdetails()">GET DETAILS</button><br><br>
+    Name: <b id="name"></b><br><br>
+    Father's Name: <b id="f_name"></b><br><br>
+    Mother's Name: <b id="m_name"></b><br><br>
+    DOB : <b id="dob"></b>
+</body>
+<script type="text/javascript">
+    function getdetails(){
+    var name = prompt("Enter your name","");
+    document.getElementById("name").innerHTML = name;
+    var f_name = prompt("Enter your father's name","");
+    document.getElementById("f_name").innerHTML = f_name;
+    var m_name = prompt("Enter your mother's name","");
+    document.getElementById("m_name").innerHTML = m_name;
+    var dob = prompt("Enter your age in dd/mm/yyyy format","");
+    document.getElementById("dob").innerHTML = dob;
+}
+
+</script>
+</html>
